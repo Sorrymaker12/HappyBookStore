@@ -14,7 +14,7 @@
     @include('Partials.navbar')
 
     {{-- Content --}}
-    <div class="container-fluid">
+    <div class="d-flex justify-content-center">
         @yield('content')
     </div>
 

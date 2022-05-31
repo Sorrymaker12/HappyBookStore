@@ -30,7 +30,7 @@ class Controller extends BaseController
             'Title' => 'Category',
             'Categories' => Category::all(),
             'Category' => Category::where('id', $id)->first(),
-            'Books' => Book::where('category_id', $id)->get(),
+            'Books' => Book::where('category_id', $id)->paginate(5),
             'Details' => Detail::all(),
         ]);
     }
